@@ -10,7 +10,15 @@ void draw_grid(int gradient, int y_intercept)
     {
         for (int x = 0; x < GRID_SIZE; x++)
         {
-            if (x == std::ceil(GRID_SIZE / 2))
+            if ((x == std::ceil(GRID_SIZE / 2) + 1) && (y == std::ceil(GRID_SIZE / 2) - y_intercept - gradient))
+            {
+                std::cout << " * ";
+            }
+            else if ((x == std::ceil(GRID_SIZE / 2) - 1) && (y == std::ceil(GRID_SIZE / 2) - y_intercept + gradient))
+            {
+                std::cout << " * ";
+            }
+            else if (x == std::ceil(GRID_SIZE / 2))
             {
                 if (y != (std::ceil(GRID_SIZE / 2) - y_intercept))
                 {
