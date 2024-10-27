@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 
-#define GRID_SIZE 11
+#define GRID_SIZE 21
 
 void draw_grid(int gradient, int y_intercept) {
     constexpr int center = GRID_SIZE / 2;
