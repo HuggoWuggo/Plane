@@ -29,8 +29,9 @@ void draw_grid(int gradient, int y_intercept, int gradient_2 = INT_MIN, int y_in
             else if (x == center) {
                 // Draw vertical axis or plot the y-intercepts
                 if (y == center - y_intercept) {
-                    SetConsoleTextAttribute(consoleHandle, 7);
+                    SetConsoleTextAttribute(consoleHandle, 10);
                     std::cout << " * ";
+                    SetConsoleTextAttribute(consoleHandle, 7);
                 } else if (y == center - y_intercept_2 && y_intercept_2 != INT_MIN) {
                     SetConsoleTextAttribute(consoleHandle, 9);  // Different color for second line's y-intercept
                     std::cout << " * ";
@@ -40,8 +41,9 @@ void draw_grid(int gradient, int y_intercept, int gradient_2 = INT_MIN, int y_in
                 }
             } else if (y == y1) {
                 // Draw the first line
-                SetConsoleTextAttribute(consoleHandle, 7);
+                SetConsoleTextAttribute(consoleHandle, 10);
                 std::cout << " * ";
+                SetConsoleTextAttribute(consoleHandle, 7);
             } else if (y == y2 && gradient_2 != INT_MIN) {
                 // Draw the second line
                 SetConsoleTextAttribute(consoleHandle, 9);
